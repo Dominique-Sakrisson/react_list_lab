@@ -7,7 +7,7 @@ export default class AvatarContainer extends Component {
         loading: true,
         characters: []
     }
-    
+
     async componentDidMount(){
         const characters = await getCharacters();
         this.setState({
@@ -20,6 +20,5 @@ export default class AvatarContainer extends Component {
         const {loading, characters} = this.state;
         if(loading) return <h1>Loading...</h1>
         return <CharacterList characters={characters}/>
-        //  (loading ? <h1>Loading...</h1> : <CharacterList characters={characters}/>) 
     }
 }

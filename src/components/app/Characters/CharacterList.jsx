@@ -7,8 +7,6 @@ const CharacterList = ({characters}) => (
     <ul aria-label='characters'>
         {characters.map((character) => (
             <li key={`${character.id}${character.image}`}>
-                {/* insert a wrapper here thats a link to the deatils page for the character with {character.id} */}
-{console.log(character.id)}
                 <Link exact to={`/${character.id}`}>
                     <Character 
                         name={character.name}

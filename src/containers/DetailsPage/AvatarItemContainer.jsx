@@ -14,7 +14,6 @@ export default class AvatarItemContainer extends Component {
     }
     async componentDidMount(){
         const character = await getCharacterById(this.props.match.params.id)
-        // const characters = await getCharacters();
         this.setState({
             id: character._id,
             name: character.name,
@@ -28,8 +27,6 @@ export default class AvatarItemContainer extends Component {
     render(){
         const {loading, name, image, affiliation, enemies} = this.state;
         if(loading) return <h1>Loading...</h1>
-        //change this to being passed the prop for the character id 
-        return <Character name={name} image={image} affiliation={affiliation} enemies={enemies}/>
-        //  (loading ? <h1>Loading...</h1> : <CharacterList characters={characters}/>) 
+        return <Character name={name} image={image} affiliation={affiliation} enemies={enemies}/> 
     }
 }
