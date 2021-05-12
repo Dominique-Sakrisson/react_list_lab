@@ -4,6 +4,8 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import HomePage from '../../containers/HomePage/AvatarContainer.jsx';
+import DetailsPage from '../../containers/DetailsPage/AvatarItemContainer.jsx';
 
 
 export default function App() {
@@ -20,7 +22,7 @@ export default function App() {
             <Route 
             path='/:id'
               exact 
-                render={(routerProps) => <HomePage{...routerProps}/>}
+                render={(routerProps) => <DetailsPage{...routerProps}/>}
             />
           </Switch>
         </Router>

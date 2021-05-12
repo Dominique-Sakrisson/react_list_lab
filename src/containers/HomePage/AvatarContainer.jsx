@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import {getCharacters} from '../services/AvatarApi.js'
-import CharacterList from '../components/app/Characters/CharacterList.jsx'
+import {getCharacters} from '../../services/AvatarApi.js'
+import CharacterList from '../../components/app/Characters/CharacterList.jsx'
 
 export default class AvatarContainer extends Component {
     state ={
         loading: true,
         characters: []
     }
+    
     async componentDidMount(){
         const characters = await getCharacters();
         this.setState({
