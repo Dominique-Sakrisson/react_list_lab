@@ -13,11 +13,12 @@ export default class AvatarItemContainer extends Component {
         enemies: '',
     }
     async componentDidMount(){
-        const character = await getCharacterById(this.props.match.params.id)
+        const character = await getCharacterById(this.props.match.params.id);
+       
         this.setState({
             id: character._id,
             name: character.name,
-            image: character.photoUrl,
+            image: character.image,
             affiliation: character.affiliation,
             enemies: character.enemies,
             loading: false,
