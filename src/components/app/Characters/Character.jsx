@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Character = ({name, image, affiliation, enemies}) => (
     <>
         <img src={image} alt={name}/>
-        <p>{name}</p>
-        <p>{affiliation}</p>
-        <p>{enemies}</p>
+        <p>character name is: {name}</p>
+        <p>Affiliations are: {affiliation}</p>
+        <p>Enemies are: {enemies}</p>
     </>
 );
 
