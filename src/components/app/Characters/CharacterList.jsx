@@ -7,7 +7,7 @@ const CharacterList = ({characters}) => (
     <ul aria-label='characters'>
         {characters.map((character) => (
             <li key={`${character.id}${character.image}`}>
-                <Link exact to={`/${character.id}`}>
+                <Link to={`/${character.id}`}>
                     <Character 
                         name={character.name}
                         image={character.image}
@@ -27,7 +27,7 @@ CharacterList.propTypes = {
             name: PropTypes.string.isRequired,
             image: PropTypes.string.isRequired,
             affiliation: PropTypes.string.isRequired,
-            enemies: PropTypes.string.isRequired
+            enemies: PropTypes.array.isRequired
         })
     ).isRequired
 };
